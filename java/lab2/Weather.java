@@ -1,21 +1,18 @@
 class Weather extends App {
-    // Поля
-    private String regionWeather;
-    private static int weatherAppCount = 0; // Статическая переменная для счетчика объектов
 
-    // Конструктор с параметрами
+    private String regionWeather;
+    private static int weatherAppCount = 0;
+
     public Weather(String title, String author, String os, String region) {
         super(title, author, os);
         this.regionWeather = region;
-        weatherAppCount++;  // Увеличение счетчика при создании объекта
+        weatherAppCount++;
     }
 
-    // Конструктор по умолчанию
     public Weather() {
         this("", "", "", "");
     }
 
-    // Геттеры и сеттеры
     public String getRegion() {
         return regionWeather;
     }

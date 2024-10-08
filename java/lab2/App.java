@@ -1,17 +1,14 @@
 abstract class App {
-    // Поля
     protected String title;
     protected String author;
     protected String os;
 
-    // Конструктор с параметрами
     public App(String title, String author, String os) {
         this.title = title;
         this.author = author;
         this.os = os;
     }
 
-    // Конструктор по умолчанию
     public App() {
         this("", "", "");
     }
@@ -19,7 +16,6 @@ abstract class App {
     // Абстрактный метод (должен быть реализован в дочерних классах)
     public abstract void run();
 
-    // Геттеры и сеттеры
     public String getTitle() {
         return title;
     }

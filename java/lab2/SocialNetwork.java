@@ -1,23 +1,19 @@
 class SocialNetwork extends App {
-    // Поля
     private String typeSN;
     private int userCountSN;
-    private static int socialNetworkAppCount = 0;  // Статическая переменная для счетчика объектов
+    private static int socialNetworkAppCount = 0;
 
-    // Конструктор с параметрами
     public SocialNetwork(String title, String author, String os, String type, int userCount) {
         super(title, author, os);
         this.typeSN = type;
         this.userCountSN = userCount;
-        socialNetworkAppCount++;  // Увеличение счетчика при создании объекта
+        socialNetworkAppCount++;
     }
 
-    // Конструктор по умолчанию
     public SocialNetwork() {
         this("", "", "", "", 0);
     }
 
-    // Геттеры и сеттеры
     public String getType() {
         return typeSN;
     }
