@@ -26,14 +26,12 @@ class HashTable<K, V> {
     private LinkedList<Entry<K, V>>[] table;
     private int size;
 
-    @SuppressWarnings("unchecked")
     public HashTable(int capacity) {
         table = new LinkedList[capacity];
         size = 0;
     }
 
     private int hash(K key) {
-        // Исправление: использование Math.abs для получения положительного индекса
         return Math.abs(key.hashCode()) % table.length;
     }
 
@@ -91,24 +89,17 @@ class HashTable<K, V> {
     public static void main(String[] args) {
         HashTable<String, Integer> hashTable = new HashTable<>(10);
 
-        // Добавляем элементы
         hashTable.put("apple", 5);
         hashTable.put("banana", 3);
         hashTable.put("orange", 7);
 
-        // Получаем элементы
         System.out.println("Значение по ключу 'apple': " + hashTable.get("apple"));
 
-        // Удаляем элемент
         hashTable.remove("banana");
 
-        // Проверяем, существует ли элемент
         System.out.println("Значение по ключу 'banana': " + hashTable.get("banana"));
 
-        // Размер таблицы
         System.out.println("Размер таблицы: " + hashTable.size());
-
-        // Проверка, пуста ли таблица
         System.out.println("Пуста ли таблица? " + hashTable.isEmpty());
     }
 }

@@ -41,17 +41,13 @@ public class StudentHashMap {
     public static void main(String[] args) {
         StudentHashMap students = new StudentHashMap();
 
-        // Добавление студентов
         students.addStudent("12345", new Student("Иван", "Иванов", 20, 4.5));
         students.addStudent("67890", new Student("Анна", "Смирнова", 22, 4.8));
 
-        // Поиск студента
         System.out.println(students.getStudent("12345"));
 
-        // Удаление студента
         students.removeStudent("67890");
 
-        // Попытка найти удаленного студента
         System.out.println(students.getStudent("67890")); // Вернет null
     }
 }
